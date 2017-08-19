@@ -1,0 +1,6 @@
+#!/bin/bash
+cd src/MonederoBingo/authorization-service
+title='Authorization Service'
+echo -n -e "\033]0;$title\007"
+mvn clean install
+java -jar target/authorization-service-0.0.1-SNAPSHOT.jar

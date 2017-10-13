@@ -35,8 +35,8 @@ public class AppConfiguration extends GlobalAuthenticationConfigurerAdapter
                         user.getString("email"),
                         user.getString("password"),
                         true, true, true, true,
-                        createAuthorityList("ROLE_" + user.getString("role")),
-                        user.getString("user_id"));
+                        createAuthorityList("ROLE_USER"),
+                        Integer.toString(user.getInt("company_user_id")));
             } else {
                 throw new BadCredentialsException("BadCredentialsException");
             }

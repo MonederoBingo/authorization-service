@@ -31,7 +31,7 @@ class AuthorizationService
         };
 
         HttpEntity<SelectQueryRQ> entity = new HttpEntity<>(
-                new SelectQueryRQ("users", filters),
+                new SelectQueryRQ("company_user", filters),
                 apiClientUtils.getHttpHeaders());
         String url = serviceLocator.getServiceURI(DATABASE, threadContextService.getEnvironment()) + "/select";
         ResponseEntity<ServiceResult> responseEntity = apiClientUtils.getRestTemplate().postForEntity(
